@@ -614,5 +614,19 @@ unique(gender_sum$ethnicity)
 sum(gender_sum$ethnicity == "hispanic or latino", na.rm = TRUE)
 
 
+mat <- as.matrix(race_df)
+mat <- mat[, -1]
+             
+vec <- c(11130, 307, 608, 1098, 501, 150, 83, 560, 92, 412, 499, 617, 528, 537,
+         585, 51, 226, 291, 377, 504, 87, 172, 443, 507, 105, 58, 516, 261, 124, 
+         179, 200, 185, 470)
+
+sweep(mat, 2, vec, `/`)
+
+
+
+
+
+
 
 
